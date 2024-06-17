@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+  resources :users
   get 'home/index'
   get 'read/:article_id', to: 'home#read', as: "read"
   post 'save-comment/:article_id', to: 'home#save_comment', as: "save_comment"
